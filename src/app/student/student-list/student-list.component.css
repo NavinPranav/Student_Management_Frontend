@@ -1,0 +1,54 @@
+td {
+  text-align: center;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+th {
+  background-color: rgb(249 115 22);
+  color: white;
+  border: 1px solid white;
+}
+
+td {
+  border: 1px solid rgb(249 115 22);
+}
+
+tr:hover {
+  background-color: rgb(254 215 170);
+}
+
+.navigation-elements {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-element {
+  border: 1px solid rgb(249 115 22);
+  display: flex;
+}
+
+.search {
+  background-color: white;
+  border: none;
+  height: 40px;
+  width: 250px;
+}
+
+::ng-deep .custom-snackbar {
+  background-color: rgb(249 115 22);
+  color: white;
+  /* border: 1px solid rgb(249 115 22); */
+  font-weight: bolder;
+}
+
+/* .uploader-status ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: rgb(249 115 22);
+} */
+
+.uploader-status ::ng-deep .mat-progress-spinner circle{
+  stroke:rgb(249 115 22)
+}
+

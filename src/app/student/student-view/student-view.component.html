@@ -1,0 +1,212 @@
+<style>
+  :root {
+    --main-color: #4a76a8;
+  }
+
+  .bg-main-color {
+    background-color: var(--main-color);
+  }
+
+  .text-main-color {
+    color: var(--main-color);
+  }
+
+  .border-main-color {
+    border-color: var(--main-color);
+  }
+</style>
+
+<div class="bg-white">
+  <div class="container mx-auto my-5 p-5">
+    <div class="md:flex no-wrap md:-mx-2">
+      <div class="w-full md:w-3/12 md:mx-2">
+        <div class="bg-white p-3 border-t-4 border-orange-500">
+          <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">
+            {{ studentData.FirstName }}
+          </h1>
+          <h3
+            class="text-gray-600 font-lg text-semibold leading-6"
+          >
+            Student of {{ studentData.Major }} Department
+          </h3>
+          <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">
+            {{ studentDataInfo }}
+          </p>
+          <ul
+            class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm"
+          >
+            <li class="flex items-center py-3">
+              <span>Student</span>
+              <span class="ml-auto"
+                ><span
+                  class="bg-orange-500 py-1 px-2 rounded text-white text-sm"
+                  >{{ studentData.ID }}</span
+                ></span
+              >
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="w-full md:w-9/12 mx-2 h-64">
+        <div class="bg-white p-3 shadow-sm rounded-sm">
+          <div
+            class="flex items-center space-x-2  text-gray-900 leading-8"
+          >
+            <span clas="text-orange-500">
+              <svg
+                class="h-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </span>
+            <span class="tracking-wide">About</span>
+          </div>
+
+          <form [formGroup]="stdForm">
+            <div class="text-gray-700">
+              <div class="grid md:grid-cols-1 text-sm">
+
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">First Name</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="FirstName"
+                    type="text"
+                    required
+                  />
+                </div><br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Last Name</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="LastName"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Age</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="Age"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">City</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="City"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Country</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="Country"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Grade</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="Grade"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Height</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="Height"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Major</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="Major"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">SAT</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="SAT"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div> <br>
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">State</div>
+                  <input
+                    class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                    formControlName="State"
+                    type="text"
+                    required
+                    readonly
+                  />
+                </div>
+                <br />
+                <div class="grid grid-cols-2">
+                  <div class="px-4 py-2 ">Gender</div>
+                  <input
+                  class="px-4 py-2 border-b border-orange-500 w-full sm:text-sm rounded-md focus:outline-none text-gray-600"
+                  formControlName="Gender"
+                  type="text"
+                  required
+                  readonly
+                />
+
+                  <div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- <div class="flex justify-center">
+            <div class="my-4">
+              <button
+              class="mt-4 h-12 hover:text-white w-28 border border-blue-500 hover:bg-blue-500 bg-white text-blue-500 font-bold"
+              (click)="applyChanges()"
+            >
+              Apply Changes
+            </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

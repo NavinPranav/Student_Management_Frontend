@@ -1,0 +1,265 @@
+<div class="max-w-4xl mx-auto bg-white p-16">
+  <form [formGroup]="stdForm" class="bg-gray-100 px-5 p-3">
+    <h1 class="font-bold text-orange-500 text-center pt-6">Student</h1>
+    <div>
+      <label
+        for="first_name"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >First name</label
+      >
+      <mat-form-field id="first_name" class="w-full" appearance="fill">
+        <input
+          type="text"
+          matInput
+          placeholder="Ex. Navin"
+          formControlName="FirstName"
+        />
+        <mat-hint>Enter student's first name</mat-hint>
+        <mat-error>
+          Please enter a valid name
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <label
+        for="last_name"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Last name</label
+      >
+      <mat-form-field id="last_name" class="w-full" appearance="fill">
+        <input
+          type="text"
+          matInput
+          placeholder="Ex. Pranav"
+          formControlName="LastName"
+        />
+        <mat-hint>Enter student's last name</mat-hint>
+        <mat-error>
+          Please enter a valid name
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <label
+        for="city"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >City</label
+      >
+      <mat-form-field id="city" class="w-full" appearance="fill">
+        <input
+          type="text"
+          matInput
+          placeholder="Ex. coimbatore"
+          formControlName="City"
+          required
+        />
+        <mat-hint>Enter student's city</mat-hint>
+        <mat-error>
+          Please enter a valid City name
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <label
+        for="state"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >State</label
+      >
+      <mat-form-field id="state" class="w-full" appearance="fill">
+        <input
+          type="text"
+          matInput
+          placeholder="Ex. Tamil nadu"
+          formControlName="State"
+          required
+        />
+        <mat-hint>Enter student's State</mat-hint>
+        <mat-error>
+          Please enter a valid State name
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <label
+        for="country"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Country</label
+      >
+      <mat-form-field id="country" class="w-full" appearance="fill">
+        <input
+          type="text"
+          matInput
+          placeholder="Ex. India"
+          formControlName="Country"
+        />
+        <mat-hint>Enter student's Country</mat-hint>
+        <mat-error>
+          Please enter a valid Country name
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="grid gap-6 mb-6 lg:grid-cols-2">
+      <div>
+        <label
+          for="age"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Age</label
+        >
+        <mat-form-field id="age" class="w-full" appearance="fill">
+          <input
+            type="text"
+            matInput
+            required
+            placeholder="Ex. 10"
+            formControlName="Age"
+          />
+          <mat-hint>Enter student's age</mat-hint>
+          <mat-error>
+            Please enter a valid age
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <label
+          for="major"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Major</label
+        >
+        <mat-form-field id="major" class="w-full" appearance="fill">
+          <input
+            type="text"
+            matInput
+            placeholder="Ex. Math"
+            formControlName="Major"
+          />
+          <mat-hint>Enter student's Major</mat-hint>
+          <mat-error>
+            Please enter a valid name
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label
+          for="gender"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Gender</label
+        >
+        <mat-form-field id="gender" class="w-full" appearance="outline">
+          <mat-select
+            formControlName="Gender"
+            placeholder="Choose student's Gender"
+          >
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+          </mat-select>
+          <mat-error>
+            Please select a field
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <label
+          for="height"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Height</label
+        >
+        <mat-form-field id="height" class="w-full" appearance="fill">
+          <input
+            type="text"
+            matInput
+            placeholder="Ex. 61"
+            formControlName="Height"
+          />
+          <mat-hint>Enter student's Height</mat-hint>
+          <mat-error>
+            Please enter valid height
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <label
+          for="grade"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Grade</label
+        >
+        <mat-form-field id="grade" class="w-full" appearance="fill">
+          <input
+            type="text"
+            matInput
+            placeholder="Ex. 67"
+            formControlName="Grade"
+          />
+          <mat-hint>Enter student's Grade</mat-hint>
+          <mat-error>
+            Please enter valid grade
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <label
+          for="sat"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >SAT</label
+        >
+        <mat-form-field id="sat" class="w-full" appearance="fill">
+          <input
+            type="text"
+            matInput
+            placeholder="Ex. 2263"
+            formControlName="SAT"
+          />
+          <mat-hint>Enter student's SAT score</mat-hint>
+          <mat-error> Please enter score </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <label
+        for="status"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Status</label
+      >
+      <mat-form-field id="status" class="w-full" appearance="outline">
+        <mat-select
+          formControlName="StudentStatus"
+          placeholder="Choose student's Status"
+        >
+          <mat-option value="Undergraduate">Under Graduate</mat-option>
+          <mat-option value="Postgraduate">Post Graduate</mat-option>
+          <mat-option value="Graduate">Graduated</mat-option>
+        </mat-select>
+        <mat-error> Please select a field </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="flex pb-3">
+      <button
+        *ngIf="editStudent"
+        type="submit"
+        (click)="openEditConfirmation()"
+        class="w-full border border-orange-500 text-orange-500 bg-white hover:text-gray-100 hover:bg-orange-500 cursor-pointer p-3 px-4 font-bold mr-3 text-center flex justify-around"
+      >
+        Edit
+      </button>
+      <button
+        *ngIf="createStudent"
+        type="submit"
+        (click)="openCreateConfirmation()"
+        class="w-full border border-orange-500 text-orange-500 bg-white hover:text-gray-100 hover:bg-orange-500 cursor-pointer p-3 px-4 font-bold mr-3"
+      >
+        Save
+      </button>
+      <br />
+      <br />
+      <button
+        class="w-full border border-gray-500 text-gray-500 bg-white hover:text-gray-100 hover:bg-gray-500 cursor-pointer p-3 px-4 font-bold"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+      <br>
+      <br>
+    </div>
+  </form>
+</div>
